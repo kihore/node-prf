@@ -1,8 +1,8 @@
 module.exports = {
-    HOST: 'localhost',
-    USER: 'root',
-    PASSWORD: 'Welcome@ta123',
-    DB:   'node_sequelize',
+    HOST: 'ampycars.cuua14cemdcq.ap-south-1.rds.amazonaws.com',
+    USER: 'Admin',
+    PASSWORD: 'ampycars',
+    DB:   'CarRental',
     dialect: 'mysql',
 
  pool:{

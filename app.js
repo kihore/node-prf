@@ -9,6 +9,7 @@ const port = process.env.PORT || 7050;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
 var whitelist = ['http://localhost:3000']
 var corsOptions= {
   origin: function (origin, callback) {
@@ -20,10 +21,18 @@ var corsOptions= {
   }
 }
 
-//setting view engine and cors policy to express instance
-app.use(cors())
+// app.get("/select",(req,res)=>{
+//   db.query("SELECT * FROM products",(err, result)=>{
+//     if(err){
+//       console.log(err);
+//     }
+//     res.send(result);
+//   })
+// })
 
-app.use("/api/addproducts", require('./routes/productRouter') )
+app.use(cors(corsOptions))
+app.use("/api/", require('./routes/productRouter') )
+
 
 
 app.listen(port, ()=>{

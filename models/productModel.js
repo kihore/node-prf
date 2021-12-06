@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) =>{
             type: DataTypes.TEXT
         },
         published: {
-            type: DataTypes.BOOLEAN
+            type: DataTypes.INTEGER
         }
     })
 
