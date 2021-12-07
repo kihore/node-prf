@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button } from 'react-bootstrap';
-import {Card} from 'react-bootstrap'
+import { Button, Card} from 'react-bootstrap';
+
 const Cars = ()=>{
   const axios = require('axios');
   const[car,setcar]=useState([]);
@@ -22,26 +22,24 @@ useEffect(()=>{
   getcardata();
 },[]);
   return(
-    <div className="constainer">
-    <div className="row">
-     <div className="col-md-4">
-      <h1>select your car</h1>
+    
+
+<div class="card-columns">
+      <h1 class="card-title">select your car</h1>
      {car.map((item)=>{
         return(   
-          <Card style={{ width: '30rem' }}>
+          <Card style={{ width: '25rem' }}>
           <Card.Img variant="top" src={item.image} />
           <Card.Body>
-            <Card.Title key= {item.id}>{item.title}</Card.Title>
-            <Card.Text key= {item.id} >₹ {item.price}</Card.Text>
-            <Card.Text key= {item.id} >{item.description}</Card.Text>
-            <Button variant="primary">Book</Button>
+            <Card.Title key= {item.id} >{item.title}</Card.Title>
+            <Card.Text >₹ {item.price}</Card.Text>
+            <Card.Text >{item.description}</Card.Text>
+            <Button  key= {item.id} variant="primary">Book</Button>
           </Card.Body>
         </Card>
          )
              })}
       </div>
-      </div>
-</div>
 ); 
 };
 export default Cars;

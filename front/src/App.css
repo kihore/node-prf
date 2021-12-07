@@ -37,6 +37,13 @@
   }
 }
 
-.h3{
-  color: blue;
-}
+ 
+/* .card-columns {
+  @include media-breakpoint-only(lg) {
+    background-color: black;
+    column-count: 5;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 2;
+  }
+}  */
