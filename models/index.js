@@ -36,7 +36,7 @@ db.sequelize = sequelize
 
 db.products = require('./productModel.js')(sequelize, DataTypes)
 
-db.sequelize.sync({ force: false })
+db.sequelize.sync({ force: false})
 .then(() => {
     console.log('yes re-sync done!')
 })

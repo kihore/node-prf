@@ -16,7 +16,12 @@ module.exports = (sequelize, DataTypes) =>{
         },
         published: {
             type: DataTypes.INTEGER
+        },
+        location: {
+            type: DataTypes.STRING,
+           
         }
+
     })
 
     return Product
